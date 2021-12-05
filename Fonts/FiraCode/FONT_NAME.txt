@@ -1,0 +1,12 @@
+This font can be set in nvim's init.lua as:
+
+vim.cmd('set guifont=FiraCode\\ NF:h18')
+
+where the h18 bit sets the text size.
+
+note: The name when setting the font is different to
+that which is show in the windows font dir:
+	C:\Windows\Fonts
+This difference caused a massive headache! Was so 
+annoying the amount of time I wasted trying to figure
+out why the font was not being set!
