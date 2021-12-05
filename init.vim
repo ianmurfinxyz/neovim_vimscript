@@ -40,9 +40,9 @@ Plug 'BurntSushi/ripgrep'
 Plug 'tpope/vim-surround'
 
 " Themes
-Plug 'kyoz/purify', { 'rtp': 'vim' }
+"Plug 'kyoz/purify', { 'rtp': 'vim' }
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'dracula/vim', { 'as': 'dracula' }
+"Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
