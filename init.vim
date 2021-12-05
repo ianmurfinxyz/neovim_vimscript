@@ -70,6 +70,9 @@ set incsearch            " live update search results
 highlight colorcolumn ctermbg=DarkGray
 highlight cursorline cterm=bold ctermbg=DarkGray
 
+" enabled mouse mode for terminals
+set mouse=a
+
 "-------------------------------------------------------------------------------
 " EDITOR THEME
 "-------------------------------------------------------------------------------
