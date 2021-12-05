@@ -18,26 +18,31 @@
 call plug#begin(stdpath('data') . '/plugged')
 
 " paq manages itself
-Plug 'savq/paq-nvim',
+Plug 'savq/paq-nvim'
 
 " nerdtree stuff
-Plug 'preservim/nerdtree',
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight',
-Plug 'Xuyuanp/nerdtree-git-plugin',
-Plug 'ryanoasis/vim-devicons',
+Plug 'preservim/nerdtree'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ryanoasis/vim-devicons'
 
 " fzf
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
 " fzf dependencies
-Plug 'junegunn/fzf.vim',
-Plug 'tpope/vim-fugitive',
-Plug 'sharkdp/bat',
-Plug 'dandavison/delta',
-Plug 'BurntSushi/ripgrep',
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'sharkdp/bat'
+Plug 'dandavison/delta'
+Plug 'BurntSushi/ripgrep'
 
 " Normal mode commands to 'surround' text with anything!
-Plug 'tpope/vim-surround',
+Plug 'tpope/vim-surround'
+
+" Themes
+Plug 'kyoz/purify', { 'rtp': 'vim' }
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
@@ -70,14 +75,20 @@ set incsearch            " live update search results
 highlight colorcolumn ctermbg=DarkGray
 highlight cursorline cterm=bold ctermbg=DarkGray
 
-" enabled mouse mode for terminals
 set mouse=a
 
 "-------------------------------------------------------------------------------
 " EDITOR THEME
 "-------------------------------------------------------------------------------
 
+" Sets the font when running in Neovide.
 set guifont=FiraCode\ NF:h18
+
+syntax on
+set background=dark
+"colorscheme purify
+colorscheme PaperColor
+"colorscheme dracula
 
 "-------------------------------------------------------------------------------
 " MOVEMENT MAPPINGS
