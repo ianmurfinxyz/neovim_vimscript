@@ -95,7 +95,7 @@ colorscheme PaperColor
 "-------------------------------------------------------------------------------
 
 " leader prefix used for custom commands
-:let mapleader='`'   
+:let mapleader=' '   
 
 " faster scrolling/movement commands
 nnoremap <S-h> 10h   
@@ -103,11 +103,35 @@ nnoremap <S-j> 10j
 nnoremap <S-k> 10k   
 nnoremap <S-l> 10l   
 
-" easier window navigatioc
+" easier window navigation
 nnoremap <leader>h <c-w>h
 nnoremap <leader>j <c-w>j
 nnoremap <leader>k <c-w>k
 nnoremap <leader>l <c-w>l
+
+" easier tab navigation
+nnoremap <leader>t gt
+
+" easier tab creation
+nnoremap <leader>y :tabedit<cr>
+
+" easy destruction of all tabs and windows
+nnoremap <leader>dat :tabonly <bar> :q<cr>
+
+" easier window splits
+nnoremap <leader>v <c-w>v
+nnoremap <leader>s <c-w>s
+
+" easier window movement; jumps to extremes
+nnoremap <leader>mh <c-w><s-h>
+nnoremap <leader>mj <c-w><s-j>
+nnoremap <leader>mk <c-w><s-k>
+nnoremap <leader>mx <c-w><s-l>
+
+" easiest window movement ever! just repeat rotations! :)
+nnoremap <leader>; <c-w><c-r>
+
+nnoremap <leader>q :q<cr>
 
 "-------------------------------------------------------------------------------
 " GENERAL MAPPINGS
@@ -118,12 +142,12 @@ nnoremap <leader>erc :edit $MYVIMRC<cr>
 
 " reload this rc file
 nnoremap <leader>rrc :so $MYVIMRC<cr>
-
+-
 " toggle relative numbers
 nnoremap <leader>rn :set relativenumber!<cr>
 
 " Paste from clipboard
-nnoremap <leader>p "+p'
+nnoremap <leader>p "+p'<cr>
 
 "-------------------------------------------------------------------------------
 " NERDTREE PLUGIN MAPPINGS
@@ -192,7 +216,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 nnoremap <leader>f <esc><esc>:Files!<cr>
 
 " Search for new file in CWD to open (only shows git tracked files)
-nnoremap <leader>gf <esc><esc>:Files!<cr>
+nnoremap <leader>gf <esc><esc>:GFiles!<cr>
 
 " Show a list of open buffers
 nnoremap <leader>b <esc><esc>:Buffers!<cr>
