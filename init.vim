@@ -40,9 +40,9 @@ Plug 'BurntSushi/ripgrep'
 Plug 'tpope/vim-surround'
 
 " Themes
-Plug 'kyoz/purify', { 'rtp': 'vim' }
+"Plug 'kyoz/purify', { 'rtp': 'vim' }
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'dracula/vim', { 'as': 'dracula' }
+"Plug 'dracula/vim', { 'as': 'dracula' }
 
 call plug#end()
 
@@ -57,7 +57,7 @@ set shiftwidth=2         " num spaces for each step of autoindent
 set smarttab        
  
 set cursorline           " draw a horizontal line under your cursor?
-set colorcolumn=81       " draw a vertical line at column number
+"set colorcolumn=81       " draw a vertical line at column number
 set number               " draw line numbers?
 set sidescroll=5         " horizontal scroll distance
  
@@ -72,7 +72,7 @@ set incsearch            " live update search results
 set incsearch            " live update search results
 set incsearch            " live update search results
 
-highlight colorcolumn ctermbg=DarkGray
+"highlight colorcolumn ctermbg=DarkGray
 highlight cursorline cterm=bold ctermbg=DarkGray
 
 set mouse=a
@@ -100,7 +100,7 @@ hi Normal guibg=NONE ctermbg=NONE
 "-------------------------------------------------------------------------------
 
 " leader prefix used for custom commands
-:let mapleader='`'   
+:let mapleader=' '   
 
 " faster scrolling/movement commands
 nnoremap <S-h> 10h   
@@ -108,11 +108,35 @@ nnoremap <S-j> 10j
 nnoremap <S-k> 10k   
 nnoremap <S-l> 10l   
 
-" easier window navigatioc
+" easier window navigation
 nnoremap <leader>h <c-w>h
 nnoremap <leader>j <c-w>j
 nnoremap <leader>k <c-w>k
 nnoremap <leader>l <c-w>l
+
+" easier tab navigation
+nnoremap <leader>t gt
+
+" easier tab creation
+nnoremap <leader>y :tabedit<cr>
+
+" easy destruction of all tabs and windows
+nnoremap <leader>dat :tabonly <bar> :q<cr>
+
+" easier window splits
+nnoremap <leader>v <c-w>v
+nnoremap <leader>s <c-w>s
+
+" easier window movement; jumps to extremes
+nnoremap <leader>mh <c-w><s-h>
+nnoremap <leader>mj <c-w><s-j>
+nnoremap <leader>mk <c-w><s-k>
+nnoremap <leader>mx <c-w><s-l>
+
+" easiest window movement ever! just repeat rotations! :)
+nnoremap <leader>; <c-w><c-r>
+
+nnoremap <leader>q :q<cr>
 
 "-------------------------------------------------------------------------------
 " GENERAL MAPPINGS
@@ -123,12 +147,12 @@ nnoremap <leader>erc :edit $MYVIMRC<cr>
 
 " reload this rc file
 nnoremap <leader>rrc :so $MYVIMRC<cr>
-
+-
 " toggle relative numbers
 nnoremap <leader>rn :set relativenumber!<cr>
 
 " Paste from clipboard
-nnoremap <leader>p "+p'
+nnoremap <leader>p "+p'<cr>
 
 "-------------------------------------------------------------------------------
 " NERDTREE PLUGIN MAPPINGS
@@ -145,6 +169,22 @@ nnoremap <Tab> :NERDTreeToggle<cr>
 
 " Character width of NERDTree window.
 let g:NERDTreeWinSize=25
+
+" Sets what should be shown upon startup.
+let g:NERDTreeShowBookmarks=1
+let g:NERDTreeShowHidden=1
+
+" Makes NERDTree (when =3) always update the CWD to the tree root 
+" whenever the tree root is changed. Also updates the CWD when switching
+" tab to that of the NERDTree in that tab.
+let g:NERDTreeChDirMode=3
+
+" Use window-level NERDTrees; one tree per window, rather than one per tab.
+let g:NERDTreeHijackNetrw=1
+
+" Do not sort bookmarks (when =0), so I can manually set my own order in
+" the bookmarks file.
+let g:NERDTreeBookmarksSort=0
 
 "-------------------------------------------------------------------------------
 " NERDTREE SYNTAX HIGHLIGHT PLUGIN
@@ -197,7 +237,7 @@ let g:NERDTreeGitStatusIndicatorMapCustom = {
 nnoremap <leader>f <esc><esc>:Files!<cr>
 
 " Search for new file in CWD to open (only shows git tracked files)
-nnoremap <leader>gf <esc><esc>:Files!<cr>
+nnoremap <leader>gf <esc><esc>:GFiles!<cr>
 
 " Show a list of open buffers
 nnoremap <leader>b <esc><esc>:Buffers!<cr>
