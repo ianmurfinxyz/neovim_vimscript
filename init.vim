@@ -88,6 +88,11 @@ syntax on
 set background=dark
 "colorscheme purify
 colorscheme PaperColor
+
+" Add this line to hide the background; in Windows Terminal this can
+" be used to show a nice terminal background image instead.
+hi Normal guibg=NONE ctermbg=NONE
+
 "colorscheme dracula
 
 "-------------------------------------------------------------------------------
