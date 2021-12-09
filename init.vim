@@ -57,7 +57,7 @@ set shiftwidth=2         " num spaces for each step of autoindent
 set smarttab        
  
 set cursorline           " draw a horizontal line under your cursor?
-set colorcolumn=81       " draw a vertical line at column number
+"set colorcolumn=81       " draw a vertical line at column number
 set number               " draw line numbers?
 set sidescroll=5         " horizontal scroll distance
  
@@ -72,7 +72,7 @@ set incsearch            " live update search results
 set incsearch            " live update search results
 set incsearch            " live update search results
 
-highlight colorcolumn ctermbg=DarkGray
+"highlight colorcolumn ctermbg=DarkGray
 highlight cursorline cterm=bold ctermbg=DarkGray
 
 set mouse=a
@@ -164,6 +164,22 @@ nnoremap <Tab> :NERDTreeToggle<cr>
 
 " Character width of NERDTree window.
 let g:NERDTreeWinSize=25
+
+" Sets what should be shown upon startup.
+let g:NERDTreeShowBookmarks=1
+let g:NERDTreeShowHidden=1
+
+" Makes NERDTree (when =3) always update the CWD to the tree root 
+" whenever the tree root is changed. Also updates the CWD when switching
+" tab to that of the NERDTree in that tab.
+let g:NERDTreeChDirMode=3
+
+" Use window-level NERDTrees; one tree per window, rather than one per tab.
+let g:NERDTreeHijackNetrw=1
+
+" Do not sort bookmarks (when =0), so I can manually set my own order in
+" the bookmarks file.
+let g:NERDTreeBookmarksSort=0
 
 "-------------------------------------------------------------------------------
 " NERDTREE SYNTAX HIGHLIGHT PLUGIN
