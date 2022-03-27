@@ -68,9 +68,6 @@ set ignorecase           " ignore case when searching
 set smartcase            " override ignorecase if pattern contains uppercase
 set hlsearch             " highlight search result
 set incsearch            " live update search results
- 
-set incsearch            " live update search results
-set incsearch            " live update search results
 
 "highlight colorcolumn ctermbg=DarkGray
 highlight cursorline cterm=bold ctermbg=DarkGray
